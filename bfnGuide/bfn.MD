@@ -1,6 +1,6 @@
 # Language Design
 
-Bfn is designed to purposely use as few characters as possible. Similar to brainfuck, it uses a cell system in which you cycle through different cells and change their numeral values. Unlike brainfuck, you can set these cells to any value, whether that be a string, number, list or whatever it may be. Bfn also comes loaded with other abilities brainfuck doesn't offer, including functions.
+Bfn is designed to purposely use as few characters as possible. Similar to brainfuck, it uses a cell system in which you cycle through different cells and change their numeral values. Unlike brainfuck, you can set these cells to any value, whether that be a string, number, list or whatever it may be. Bfn also comes loaded with other abilities brainfuck doesn't offer.
 
 # Syntax
 
@@ -89,22 +89,6 @@ and the remaining list will simply be
 
 The same logic applies to strings.
 
-## Function Syntax
-
-Functions are another data type that can be entered into a cell. No operator other than '=' can be used on a function and functions are the single data type that can be accessed no matter what cell you are selected on.
-
-To create a function, simply select your cell and run
-
-```
-my_function(params):function_code_here =
-```
-
-Functions can of course be accessed from anywhere, by simply calling
-
-```
-my_function(params)
-```
-
 # Basic Tools
 
 ## Printing
@@ -113,4 +97,22 @@ In order to print, select the cell you wish to print and simply run
 
 ```
 print
+```
+
+## Loops
+
+The only loop available as of now in bfn is a while loop. The syntax is as follows
+
+```
+while =0:1+;print
+```
+
+This simply says while the current cell is equal to 0, it will add one to the cell and print. Semicolons replace linebreaks and all comparators(=, !=, <, >, >=, <=) are available. Comparators go before the first number and the code to run is placed after the colon.
+
+## If
+
+If statements use the exact same logic and syntax as while loops but only activate once.
+
+```
+if =0:1+;print
 ```
