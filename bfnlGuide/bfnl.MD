@@ -114,3 +114,18 @@ In order to print, select the cell you wish to print and simply run
 ```
 print
 ```
+
+## Comments
+
+```
+// Comments are typed like this \\
+```
+
+## Accessing Cell Value
+
+The cell value can be accessed using '%' as an integer.
+
+```
+10=
+if =10:%-;print // Sets cell to 10, checks if it's equal to 10, removes the cell value, prints \\
+```

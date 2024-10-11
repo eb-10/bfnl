@@ -13,15 +13,20 @@ class BfnlInterpreter:
             code = file.read()
             self.execute(code)
 
+
+
     def execute_line(self, line: str):
         line = line.strip()
-        
+
         # Remove comments from the line
         line = self.remove_comments(line)
 
         # Skip empty lines after comment removal
         if not line:
             return
+
+        # Replace '%' with the current cell value
+        line = line.replace('%', str(self.cells[self.current_cell]))
         
         # Check for while loop
         if line.startswith("while"):
@@ -203,6 +208,7 @@ class BfnlInterpreter:
             value = int(value_str)  # Assume it's an integer
 
         self.cells[self.current_cell] = value
+
 
     def print_value(self):
         print(self.cells[self.current_cell])
