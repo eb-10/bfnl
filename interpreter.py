@@ -128,10 +128,10 @@ class BfnlInterpreter:
     def remove_comments(self, line: str) -> str:
         # Remove comments by splitting on the comment markers
         if '//' in line:
-            line = line.split('//', 1)[0]  # Keep only the part before the comment
+            line = line.split('//', 1)[0]
         if '\\' in line:
-            line = line.split('\\', 1)[0]  # Keep only the part before the comment
-        return line.strip()  # Remove leading/trailing whitespace
+            line = line.split('\\', 1)[0]
+        return line.strip()
 
     def move_cell(self, line: str):
         direction = line[-1]
@@ -210,7 +210,7 @@ class BfnlInterpreter:
 
 def execute(file_name):
     if __name__ == "__main__":
-        filename = (f'.\\bfnl\\examples\\{file_name}')
+        filename = (f'.\\examples\\{file_name}')
         interpreter = BfnlInterpreter()
         interpreter.execute_from_file(filename)
 

@@ -1,6 +1,6 @@
 # Language Design
 
-bfnl is designed to purposely use as few characters as possible. Similar to brainfuck, it uses a cell system in which you cycle through different cells and change their numeral values. Unlike brainfuck, you can set these cells to any value, whether that be a string, number, list or whatever it may be. bfnl also comes loaded with other abilities brainfuck doesn't offer, including functions.
+bfnl is designed to be a lightweight and easy to learn language. Similar to brainfuck, it uses a cell system in which you cycle through different cells and change their numeral values. Unlike brainfuck, you can set these cells to any value, whether that be a string, number, list or whatever it may be. bfnl also comes loaded with other abilities brainfuck doesn't offer, including functions.
 
 # Syntax
 
