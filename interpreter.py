@@ -1,4 +1,4 @@
-class BfnInterpreter:
+class BfnlInterpreter:
     def __init__(self):
         self.cells = [0]  # Initialize with one cell
         self.current_cell = 0  # Start at the first cell
@@ -208,8 +208,11 @@ class BfnInterpreter:
         print(self.cells[self.current_cell])
 
 
-# Example Usage
-if __name__ == "__main__":
-    filename = str(input('Filepath: '))  # Replace with your .bfnl file path
-    interpreter = BfnInterpreter()
-    interpreter.execute_from_file(filename)
+def execute(file_name):
+    if __name__ == "__main__":
+        filename = (f'.\\bfnl\\examples\\{file_name}')
+        interpreter = BfnlInterpreter()
+        interpreter.execute_from_file(filename)
+
+print('This will only search the examples directory')
+execute(str(input('Filename: ')))
